@@ -34,7 +34,7 @@ while True:
     if nextcursor != "":
         trades = requests.get(f"https://trades.roblox.com/v1/trades/inbound?cursor={nextcursor}&limit=100&sortOrder=Desc", cookies=cookies, headers=headers)
     else:
-        trades = requests.get(f"https://trades.roblox.com/v1/trades/inbound?limit=100&sortOrder=Desc", cookies=cookies, headers=headers)
+        trades = requests.get("https://trades.roblox.com/v1/trades/inbound?limit=100&sortOrder=Desc", cookies=cookies, headers=headers)
 
     trades = trades.json()
     print(trades)
